@@ -1,17 +1,4 @@
 
-# Завдання 3. Зміна правильних відповідей
-
-y_true_new = np.array([0, 1, 0, 1])
-
-bce_new = -np.mean(
-    y_true_new * np.log(y_pred) +
-    (1 - y_true_new) * np.log(1 - y_pred)
-)
-
-total_loss_new = bce_new + l2
-
-print("Нова BCE:", round(bce_new, 4))
-print("Нова загальна втрата:", round(total_loss_new, 4))
 import numpy as np
 
 # Правильні відповіді
@@ -41,3 +28,17 @@ total_loss = bce + l2
 
 print("L2:", l2)
 print("Загальна втрата:", total_loss)
+
+# Завдання 3. Зміна правильних відповідей
+
+y_true_new = np.array([0, 1, 0, 1])
+
+bce_new = -np.mean(
+    y_true_new * np.log(y_pred) +
+    (1 - y_true_new) * np.log(1 - y_pred)
+)
+
+total_loss_new = bce_new + l2
+
+print("Нова BCE:", round(bce_new, 4))
+print("Нова загальна втрата:", round(total_loss_new, 4))
